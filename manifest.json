@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Anti-Ana",
+    "version": "0.5",
+    "description": "Anti-anorexia web extension",
+    "author": "Gerardo Valenzuela (gjvalenz)",
+    "icons": {
+        "128": "images/icon-128.png"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": [
+                "*://*/*"
+            ],
+            "exclude_matches": [
+                "*://*/search?q=anorexia+help*",
+                "*://*.nationaleatingdisorders.org/*",
+                "*://*.eatingdisorderhope.com/*",
+                "*://*.anad.org/*"
+            ]
+        }
+    ],
+    "run_at": "document_end"
+}
