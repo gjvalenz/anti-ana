@@ -52,7 +52,7 @@ function construct_true_regexes()
     var regxs = []
     for(var word of regexes)
     {
-        var string = String()
+        var string = String('(^|\\W)')
         const len = word.length
         for(var i = 0; i < len; i++)
         {
@@ -89,7 +89,8 @@ function check_words(content)
         {
             console.log(matches)
             const index = matches.index
-            console.log(`AA Context: ${content.substring(index-10, index+30)} matches`)
+            console.log(`anti-ana: ${content.substring(index-5, index+30)}`)
+            //alert(`anti-ana: ${content.substring(index-5, index+30)}`)            
             console.log(rgx)
             return true
         }
