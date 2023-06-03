@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Anti-Ana",
-    "version": "0.5",
+    "version": "0.0.0.5",
     "description": "Anti-anorexia web extension",
     "author": "Gerardo Valenzuela (gjvalenz)",
     "icons": {
